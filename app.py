@@ -48,7 +48,7 @@ def build_workflow(prompt, negative_prompt, width, height, steps, cfg, seed):
         "3": {
             "class_type": "VAELoader",
             "inputs": {
-                "vae_name": "ae.safetensors"
+                "vae_name": "split_files/vae/ae.safetensors"
             }
         },
         "4": {
