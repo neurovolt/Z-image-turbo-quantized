@@ -31,18 +31,16 @@ def build_workflow(prompt, negative_prompt, width, height, steps, cfg, seed):
     
     workflow = {
         "1": {
-            "class_type": "UNETLoader",
+            "class_type": "UnetLoaderGGUF",
             "inputs": {
-                "unet_name": "z_image_turbo-Q5_K_S.gguf",
-                "weight_dtype": "default"
+                "unet_name": "z_image_turbo-Q5_K_S.gguf"
             }
         },
         "2": {
-            "class_type": "CLIPLoader", 
+            "class_type": "CLIPLoaderGGUF",
             "inputs": {
                 "clip_name": "Qwen3-4B-Q5_K_M.gguf",
-                "type": "lumina2",
-                "device": "default"
+                "type": "lumina2"
             }
         },
         "3": {
